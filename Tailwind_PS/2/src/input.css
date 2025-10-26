@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@layer components {
+  /* Base Button */
+  .btn {
+    @apply font-semibold px-4 py-2 rounded-md transition border;
+  }
+
+  /* Solid Buttons */
+  .btn-primary    { @apply bg-blue-600 hover:bg-blue-700 text-white border-transparent; }
+  .btn-secondary  { @apply bg-gray-600 hover:bg-gray-700 text-white border-transparent; }
+  .btn-success    { @apply bg-green-600 hover:bg-green-700 text-white border-transparent; }
+  .btn-danger     { @apply bg-red-600 hover:bg-red-700 text-white border-transparent; }
+  .btn-warning    { @apply bg-yellow-400 hover:bg-yellow-500 text-black border-transparent; }
+  .btn-info       { @apply bg-cyan-500 hover:bg-cyan-600 text-white border-transparent; }
+  .btn-dark       { @apply bg-gray-900 hover:bg-gray-800 text-white border-transparent; }
+
+  /* Outline Buttons */
+  .btn-outline-primary    { @apply border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white; }
+  .btn-outline-secondary  { @apply border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white; }
+  .btn-outline-success    { @apply border-green-600 text-green-600 hover:bg-green-600 hover:text-white; }
+  .btn-outline-danger     { @apply border-red-600 text-red-600 hover:bg-red-600 hover:text-white; }
+  .btn-outline-warning    { @apply border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black; }
+  .btn-outline-info       { @apply border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white; }
+  .btn-outline-dark       { @apply border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white; }
+}
