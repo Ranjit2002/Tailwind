@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook - Log in or Sign Up</title>
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+  <link href="./src/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="container mt-32 flex items-start justify-center">
+    <!-- Left Section -->
+    <div class="left w-[40%] m-14">
+      <img src="img/fb.svg" alt="" class="w-80">
+      <p class="text-3xl mx-8">
+        Facebook helps you connect and share with the people in your life.
+      </p>
+    </div>
+
+      <!-- Right Section + Create Page Paragraph -->
+    <div class="flex flex-col items-center w-[26%]">
+      <div class="right flex flex-col bg-white p-4 rounded-lg text-[17px] w-full shadow-lg">
+        <input class="px-3 h-12 my-2 outline-blue-400 border border-gray-300 text-gray-600 rounded-md"
+          type="text" placeholder="Email or phone number">
+        <input class="px-3 h-12 my-2 outline-blue-400 border border-gray-300 text-gray-600 rounded-md"
+          type="password" placeholder="Password">
+        <button
+          class="bg-blue-500 hover:bg-blue-400 text-white my-2 py-3 rounded-md text-xl font-bold cursor-pointer">
+          Log in
+        </button>
+        <span class="text-blue-600 text-center text-sm my-2 tracking-tight cursor-pointer hover:underline">
+          Forgotten password?
+        </span>
+        <hr class="my-3 border-gray-300">
+        <button
+          class="bg-green-500 hover:bg-green-600 text-white px-4 mx-auto my-2 py-3 rounded-md text-lg w-fit font-bold cursor-pointer">
+          Create new account
+        </button>
+      </div>
+
+        <!-- ✅ This part is now BELOW the form box -->
+      <p class="text-sm text-center mt-4">
+        <span class="font-bold mr-1 cursor-pointer hover:underline">Create a page</span>
+        for a celebrity, brand, or business.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
