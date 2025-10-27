@@ -1,0 +1,59 @@
+First do this in your VS cmd
+
+--->  set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+--->  Get-ExecutionPolicy
+--->  Get-ExecutionPolicy -list
+
+output is
+
+        Scope ExecutionPolicy
+        ----- ---------------
+MachinePolicy       Undefined
+   UserPolicy       Undefined
+      Process       Undefined
+  CurrentUser    RemoteSigned
+ LocalMachine       Undefined
+
+
+After that paste this in VS cmd 
+
+--->  npm install tailwindcss @tailwindcss/cli
+
+
+make a src folder. In the folder make one file input.css, in the input.css paste this
+
+--->  @import "tailwindcss";
+
+
+make a index.html file. In that file paste this
+
+--->  <link href="./src/output.css" rel="stylesheet">
+
+
+Paste this in package.json file
+
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.15",
+    "tailwindcss": "^4.1.15"
+  },
+  "scripts":{
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  }
+}
+
+
+After that run this in terminal run this command
+
+---> npm run dev
+
+If you have not pasted that and running this command the changes will not reflect in the browser
+
+
+Otherwise you can directly paste this in VS code terminal 
+
+--->  npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+
+And also install Tailwind intellisence extension.
+
+
