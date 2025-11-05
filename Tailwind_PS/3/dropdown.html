@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dropdown menu example using Tailwind CSS with Account settings, Support, License, and Sign out options.">
+  <title>Dropdown Menu Example</title>
+  <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body class="bg-[#0f172a] flex items-center justify-center min-h-screen font-sans text-white">
+
+  <nav class="relative inline-block text-left">
+    <div>
+      <button id="menuButton" type="button"
+        class="inline-flex justify-center w-full rounded-md bg-gray-800 px-4 py-2 text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+        aria-expanded="false" aria-haspopup="true">
+        Options
+        <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div id="dropdownMenu"
+      class="hidden absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-gray-800 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+      <ul class="py-2 text-sm text-gray-200" aria-labelledby="menuButton">
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md transition">Account settings</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md transition">Support</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md transition">License</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md transition">Sign out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    const button = document.getElementById('menuButton');
+    const menu = document.getElementById('dropdownMenu');
+
+    button.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Close dropdown when clicking outside
+    window.addEventListener('click', (e) => {
+      if (!button.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>
